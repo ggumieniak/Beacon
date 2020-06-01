@@ -15,7 +15,7 @@ class FindWayViewController: UIViewController, CLLocationManagerDelegate {
     var napis: String?
     @IBOutlet weak var kierunek: UILabel!
     var CzyJestesBeacon: Bool?
-    var beaconManager = BeaconManager()
+    var beaconManager: BeaconManager?
     var listaBeaconowRegion = Set<CLBeaconRegion>()
     
     
@@ -23,8 +23,8 @@ class FindWayViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        beaconManager.fetchData()
-        print(beaconManager.beaconData)
+        print("W bazie jest \(beaconManager?.beaconData.count) beaconow")
+        print("Wybrana sale z id \(sala)")
         
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -55,19 +55,34 @@ class FindWayViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         if let beacon = region as? CLBeaconRegion {
             print("Wszedles do strefy beaconu \(beacon.major), jestem w jego zasiegu")
-            // pobierz i wyswietl informacje
+            if !listaBeaconowRegion.contains(beacon as! CLBeaconRegion) {
+                listaBeaconowRegion.insert(beacon)
+            }
+            if listaBeaconowRegion.count > 1 {
+                for item in listaBeaconowRegion {
+                    locationManager.stopRangingBeacons(satisfying: item.beaconIdentityConstraint)
+                }
+                listaBeaconowRegion.removeAll()
+                locationManager.startRangingBeacons(satisfying: beacon.beaconIdentityConstraint)
+                
+            }
+            let showHint = beaconManager?.showDestiny()
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         if let beacon = region as? CLBeaconRegion {
+            listaBeaconowRegion.remove(region as! CLBeaconRegion)
             print("Wyszedles ze strefy beaconu \(beacon.major), nie jestes w jego zasiegu")
         }
     }
     
+    
+    //MARK: - Uzyskaj informacje o celu i wyswietl
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         print(beacons.count)
         if beacons.count > 0 {
+//            beaconManager.showDestiny()
             if region.major == 12903 {
                 let proximity = znajdzBeacon(beacons,12903)
                 updateDistance(proximity)
@@ -104,7 +119,7 @@ class FindWayViewController: UIViewController, CLLocationManagerDelegate {
                 self.view.backgroundColor = UIColor.red
                 self.kierunek.text = "Jestes u celu"
             default:
-                print("Brak informacji")
+                print("Brak informacji") // opcja kiedy odlegosc bedzie niestandardowa
             }
         }
     }

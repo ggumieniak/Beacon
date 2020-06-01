@@ -9,5 +9,9 @@
 import Foundation
 
 struct BeaconData: Decodable {
-    let beacon: BeaconFromServer
+    let id: String
+    let idBecon: String
+    let minor: String
+    let major: String
+    let floor: String
 }

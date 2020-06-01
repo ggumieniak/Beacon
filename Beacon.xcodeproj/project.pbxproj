@@ -16,10 +16,11 @@
 		CE77971F247A9AA100FD8287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE77971E247A9AA100FD8287 /* Assets.xcassets */; };
 		CE779722247A9AA100FD8287 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE779720247A9AA100FD8287 /* LaunchScreen.storyboard */; };
 		CE937B2B247ADF7C004E7BE0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE937B2A247ADF7C004E7BE0 /* LoginViewController.swift */; };
-		CE937B2D247AE193004E7BE0 /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE937B2C247AE193004E7BE0 /* Contents.swift */; };
 		CE937B2F247AE6E2004E7BE0 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE937B2E247AE6E2004E7BE0 /* RoundButton.swift */; };
 		CEB34EBD2485126A0050C1EF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CEB34EBC2485126A0050C1EF /* .gitignore */; };
-		CEF6BF71248517E000FE9769 /* BeaconFromServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6BF70248517E000FE9769 /* BeaconFromServer.swift */; };
+		CEF6BF742485424900FE9769 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6BF732485424900FE9769 /* Constants.swift */; };
+		CEF6BF7624854FE100FE9769 /* OptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6BF7524854FE100FE9769 /* OptionManager.swift */; };
+		CEF6BF782485502200FE9769 /* SalaDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6BF772485502200FE9769 /* SalaDB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,11 +35,12 @@
 		CE779721247A9AA100FD8287 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE779723247A9AA100FD8287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE937B2A247ADF7C004E7BE0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		CE937B2C247AE193004E7BE0 /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
 		CE937B2E247AE6E2004E7BE0 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		CEB34EBB2485120E0050C1EF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CEB34EBC2485126A0050C1EF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		CEF6BF70248517E000FE9769 /* BeaconFromServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconFromServer.swift; sourceTree = "<group>"; };
+		CEF6BF732485424900FE9769 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CEF6BF7524854FE100FE9769 /* OptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionManager.swift; sourceTree = "<group>"; };
+		CEF6BF772485502200FE9769 /* SalaDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaDB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 			children = (
 				CE4DC46C2484EBF800963EF2 /* BeaconManager.swift */,
 				CE4DC46E24850F3D00963EF2 /* BeaconData.swift */,
-				CEF6BF70248517E000FE9769 /* BeaconFromServer.swift */,
+				CEF6BF7524854FE100FE9769 /* OptionManager.swift */,
+				CEF6BF772485502200FE9769 /* SalaDB.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -85,13 +88,13 @@
 			children = (
 				CE779715247A9AA000FD8287 /* AppDelegate.swift */,
 				CE779717247A9AA000FD8287 /* SceneDelegate.swift */,
+				CEF6BF722485421400FE9769 /* Helpers */,
 				CE557F07247B05AC00ED0EDE /* Model */,
 				CE937B28247ADF51004E7BE0 /* Controller */,
 				CE937B29247ADF5D004E7BE0 /* View */,
 				CE77971E247A9AA100FD8287 /* Assets.xcassets */,
 				CE779720247A9AA100FD8287 /* LaunchScreen.storyboard */,
 				CE779723247A9AA100FD8287 /* Info.plist */,
-				CE937B2C247AE193004E7BE0 /* Contents.swift */,
 				CE937B2E247AE6E2004E7BE0 /* RoundButton.swift */,
 			);
 			path = Beacon;
@@ -112,6 +115,14 @@
 				CE77971B247A9AA000FD8287 /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CEF6BF722485421400FE9769 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CEF6BF732485424900FE9769 /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,13 +199,14 @@
 			files = (
 				CE937B2F247AE6E2004E7BE0 /* RoundButton.swift in Sources */,
 				CE937B2B247ADF7C004E7BE0 /* LoginViewController.swift in Sources */,
-				CEF6BF71248517E000FE9769 /* BeaconFromServer.swift in Sources */,
-				CE937B2D247AE193004E7BE0 /* Contents.swift in Sources */,
+				CEF6BF7624854FE100FE9769 /* OptionManager.swift in Sources */,
 				CE77971A247A9AA000FD8287 /* FindWayViewController.swift in Sources */,
+				CEF6BF742485424900FE9769 /* Constants.swift in Sources */,
 				CE4DC46F24850F3D00963EF2 /* BeaconData.swift in Sources */,
 				CE779716247A9AA000FD8287 /* AppDelegate.swift in Sources */,
 				CE779718247A9AA000FD8287 /* SceneDelegate.swift in Sources */,
 				CE4DC46D2484EBF800963EF2 /* BeaconManager.swift in Sources */,
+				CEF6BF782485502200FE9769 /* SalaDB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

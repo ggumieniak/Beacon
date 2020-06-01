@@ -16,8 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcX-c0-IKS">
-                                <rect key="frame" x="187.5" y="333.5" width="0.0" height="0.0"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wb8-Ez-fhQ" userLabel="Obrazy">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zbliż się do najbliższego beacona" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcX-c0-IKS">
+                                <rect key="frame" x="0.0" y="244" width="375" height="179.5"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" updatesFrequently="YES"/>
                                 </accessibility>
@@ -28,8 +32,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="KcX-c0-IKS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ifl-Ot-oFb"/>
                             <constraint firstItem="KcX-c0-IKS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RBh-6e-aCj"/>
                             <constraint firstItem="KcX-c0-IKS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="arR-SS-FhI"/>
+                            <constraint firstAttribute="trailing" secondItem="KcX-c0-IKS" secondAttribute="trailing" id="k6w-jx-37t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1960.8695652173915" y="109.82142857142857"/>
+            <point key="canvasLocation" x="1960.8" y="109.29535232383809"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="dal-06-ZHt">

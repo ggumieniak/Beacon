@@ -1,5 +1,5 @@
 //
-//  BeaconManager.swift
+//  OptionManager.swift
 //  Beacon
 //
 //  Created by user on 01/06/2020.
@@ -8,21 +8,12 @@
 
 import Foundation
 
-class BeaconManager {
-    let BeaconURL = "http://s35615.s.pwste.edu.pl/DataBaseBeconServer"
-    var beaconData = [BeaconData]()
-    var currentBeaconMajor: Int?
+class OptionManager {
+    var salaDB = [SalaDB]()
     
-    func showDestiny() {
-        
-    }
-    
-    func setBeacon(major: NSNumber) {
-        currentBeaconMajor = major as? Int
-    }
-    
+    let serverURL = "http://s35615.s.pwste.edu.pl/DataBaseBeconServer/dbClassroom.php"
     func fetchData() {
-        guard let url = URL(string: BeaconURL) else {
+        guard let url = URL(string: serverURL) else {
             return
         }
         
@@ -32,18 +23,29 @@ class BeaconManager {
                 let decoder = JSONDecoder()
                 if let safeData = data {
                     do {
-                        let results = try decoder.decode([BeaconData].self, from: safeData)
+                    let results = try decoder.decode([SalaDB].self, from: safeData)
                         if results.count > 0 {
-                            self.beaconData = results
+                            self.salaDB = results
                         }
-                        print(results)
                     } catch {
                         print(error)
+                        
                     }
                 }
             }
         }
         task.resume()
-        print("beaconData \(beaconData)")
+        print("salaDB \(salaDB)")
+    }
+    func chooseDestiny(pickedRoom: String) -> String {
+        for room in salaDB {
+            if room.name == pickedRoom {
+                return room.id_becon
+            }
+        }
+        return "0"
+    }
+    func getCountSalaDB() {
+        print("\(salaDB.count)")
     }
 }
