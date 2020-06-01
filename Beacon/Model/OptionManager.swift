@@ -16,7 +16,6 @@ class OptionManager {
         guard let url = URL(string: serverURL) else {
             return
         }
-        
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url) { (data, response, error) in
             if error == nil {
@@ -29,7 +28,6 @@ class OptionManager {
                         }
                     } catch {
                         print(error)
-                        
                     }
                 }
             }

@@ -11,7 +11,7 @@ import CoreLocation
 
 class FindWayViewController: UIViewController, CLLocationManagerDelegate {
     
-    var sala: String?
+    var userDestiny: String?
     var napis: String?
     @IBOutlet weak var kierunek: UILabel!
     var CzyJestesBeacon: Bool?
@@ -23,8 +23,8 @@ class FindWayViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("W bazie jest \(beaconManager?.beaconData.count) beaconow")
-        print("Wybrana sale z id \(sala)")
+        print("W bazie jest \(beaconManager?.beaconDB.count) beaconow")
+        print("Wybrana sale z id \(userDestiny)")
         
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -53,24 +53,44 @@ class FindWayViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        beaconManager?.fetchData()  // dodane w ramach testu
         if let beacon = region as? CLBeaconRegion {
-            print("Wszedles do strefy beaconu \(beacon.major), jestem w jego zasiegu")
-            if !listaBeaconowRegion.contains(beacon as! CLBeaconRegion) {
-                listaBeaconowRegion.insert(beacon)
+            setUpActualMajorFrom(beacon)
+            checkThatBeaconIsCreated(beacon)
+            checkIfMoreThenOneBeacon(beacon)
+            checkIsWeAreInDestiny(userDestiny)
+        }
+    }
+    
+    func setUpActualMajorFrom(_ currentBeacon: CLBeaconRegion) {
+        beaconManager?.setBeacon(major: currentBeacon.major!)
+    }
+    
+    func checkThatBeaconIsCreated(_ beacon: CLBeaconRegion) {
+        if !listaBeaconowRegion.contains(beacon as! CLBeaconRegion) {
+            listaBeaconowRegion.insert(beacon)
+        }
+    }
+    
+    func checkIfMoreThenOneBeacon(_ beacon: CLBeaconRegion) {
+        if listaBeaconowRegion.count > 1 {
+            for item in listaBeaconowRegion {
+                locationManager.stopRangingBeacons(satisfying: item.beaconIdentityConstraint)
             }
-            if listaBeaconowRegion.count > 1 {
-                for item in listaBeaconowRegion {
-                    locationManager.stopRangingBeacons(satisfying: item.beaconIdentityConstraint)
-                }
-                listaBeaconowRegion.removeAll()
-                locationManager.startRangingBeacons(satisfying: beacon.beaconIdentityConstraint)
-                
-            }
-            let showHint = beaconManager?.showDestiny()
+            listaBeaconowRegion.removeAll()
+            locationManager.startRangingBeacons(satisfying: beacon.beaconIdentityConstraint)
+        }
+    }
+    
+    func checkIsWeAreInDestiny(_ userDestiny: String?) {
+        if let destiny = userDestiny {
+            let showHint = beaconManager?.showDestiny(destinyBeacon: destiny)
+            kierunek.text = showHint
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        beaconManager?.fetchData() // dodane w ramach testu
         if let beacon = region as? CLBeaconRegion {
             listaBeaconowRegion.remove(region as! CLBeaconRegion)
             print("Wyszedles ze strefy beaconu \(beacon.major), nie jestes w jego zasiegu")
@@ -107,7 +127,6 @@ class FindWayViewController: UIViewController, CLLocationManagerDelegate {
             case .unknown:  // kiedy straci
                 self.view.backgroundColor = UIColor.gray
                 self.kierunek.text = "Nie wiemy jak daleko jestes"
-                
             case .far:
                 self.view.backgroundColor = UIColor.blue
                 self.kierunek.text = "Jestes daleko"

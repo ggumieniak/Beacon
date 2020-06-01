@@ -62,8 +62,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rgN-eq-tLF">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTw-H1-yFQ" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTw-H1-yFQ" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                                 <color key="backgroundColor" name="Font"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <state key="normal" title="C41">
@@ -78,8 +78,8 @@
                                                     <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="EoW-We-w1f"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8a-8z-9jk" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="55.5" width="375" height="47.5"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8a-8z-9jk" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                                 <color key="backgroundColor" name="Font"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <state key="normal" title="C42">
@@ -94,8 +94,8 @@
                                                     <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="0g5-2W-oRD"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dU4-dr-o99" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="111" width="375" height="47.5"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dU4-dr-o99" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                                 <color key="backgroundColor" name="Font"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <state key="normal" title="C43">
@@ -110,8 +110,8 @@
                                                     <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="SLE-tZ-1nC"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOO-Nz-RZo" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="166.5" width="375" height="47.5"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOO-Nz-RZo" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                                 <color key="backgroundColor" name="Font"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <state key="normal" title="C44">
@@ -126,8 +126,8 @@
                                                     <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="ggO-kB-nos"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsf-fn-shn" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="222" width="375" height="47.5"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsf-fn-shn" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                                 <color key="backgroundColor" name="Font"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <state key="normal" title="C45">
@@ -142,8 +142,8 @@
                                                     <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="CwA-jm-s4v"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcb-y8-42c" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="277.5" width="375" height="48"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcb-y8-42c" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                                 <color key="backgroundColor" name="Font"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <state key="normal" title="C46">
@@ -158,8 +158,8 @@
                                                     <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="ITh-a1-T8F"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edY-uT-Xnk" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="333.5" width="375" height="47.5"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edY-uT-Xnk" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                                 <color key="backgroundColor" name="Font"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <state key="normal" title="C47">
@@ -174,8 +174,8 @@
                                                     <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="UnZ-YZ-T4Q"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75t-ch-bL5" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="389" width="375" height="47.5"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75t-ch-bL5" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                                 <color key="backgroundColor" name="Font"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <state key="normal" title="C48">
@@ -190,8 +190,8 @@
                                                     <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="oxn-pY-Tpc"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxS-yi-DGm" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="444.5" width="375" height="47.5"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxS-yi-DGm" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                                 <color key="backgroundColor" name="Font"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <state key="normal" title="C49">
@@ -206,8 +206,8 @@
                                                     <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="yKs-3a-3HH"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUR-CQ-jmb" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="500" width="375" height="47.5"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUR-CQ-jmb" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                                 <color key="backgroundColor" name="Font"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <state key="normal" title="W18">
@@ -222,8 +222,8 @@
                                                     <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="vlr-eZ-vRv"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05O-oe-QhU" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="555.5" width="375" height="47.5"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05O-oe-QhU" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                                 <color key="backgroundColor" name="Font"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <state key="normal" title="W19">
@@ -282,6 +282,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="qSb-pW-Ldg"/>
                     <connections>
+                        <outlet property="C41Button" destination="YTw-H1-yFQ" id="Fyc-iF-3bS"/>
+                        <outlet property="C42Button" destination="y8a-8z-9jk" id="FBP-r4-EZa"/>
+                        <outlet property="C43Button" destination="dU4-dr-o99" id="wTW-SY-TdI"/>
+                        <outlet property="C44Button" destination="AOO-Nz-RZo" id="ciD-VM-MC8"/>
+                        <outlet property="C45Button" destination="jsf-fn-shn" id="S06-h9-mlP"/>
+                        <outlet property="C46Button" destination="Fcb-y8-42c" id="HOR-B4-mb8"/>
+                        <outlet property="C47Button" destination="edY-uT-Xnk" id="GWg-re-uSQ"/>
+                        <outlet property="C48Button" destination="75t-ch-bL5" id="oG6-6M-zvL"/>
+                        <outlet property="C49Button" destination="jxS-yi-DGm" id="gXi-Ai-cdS"/>
+                        <outlet property="W18Button" destination="sUR-CQ-jmb" id="R20-qe-8tJ"/>
+                        <outlet property="W19Button" destination="05O-oe-QhU" id="9ey-f1-fCf"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="findWay" id="gfb-ti-y5m"/>
                     </connections>
                 </viewController>
