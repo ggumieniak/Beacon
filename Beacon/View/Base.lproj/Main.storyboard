@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FcY-oO-7pO">
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Find Way View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FindWayViewController" customModule="Beacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcX-c0-IKS">
+                                <rect key="frame" x="187.5" y="333.5" width="0.0" height="0.0"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" updatesFrequently="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KcX-c0-IKS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RBh-6e-aCj"/>
+                            <constraint firstItem="KcX-c0-IKS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="arR-SS-FhI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pu8-IV-WiI"/>
+                    <connections>
+                        <outlet property="kierunek" destination="KcX-c0-IKS" id="g3W-dN-WQa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960.8695652173915" y="109.82142857142857"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="dal-06-ZHt">
+            <objects>
+                <viewController id="eOx-Bz-Pci" customClass="LoginViewController" customModule="Beacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nLz-qI-z40">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dYp-Ho-17N">
+                                <rect key="frame" x="0.0" y="54" width="375" height="603"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rgN-eq-tLF">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTw-H1-yFQ" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
+                                                <color key="backgroundColor" name="Font"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="C41">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="EoW-We-w1f"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8a-8z-9jk" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="55.5" width="375" height="47.5"/>
+                                                <color key="backgroundColor" name="Font"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="C42">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="0g5-2W-oRD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dU4-dr-o99" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="111" width="375" height="47.5"/>
+                                                <color key="backgroundColor" name="Font"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="C43">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="SLE-tZ-1nC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOO-Nz-RZo" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="166.5" width="375" height="47.5"/>
+                                                <color key="backgroundColor" name="Font"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="C44">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="ggO-kB-nos"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsf-fn-shn" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="222" width="375" height="47.5"/>
+                                                <color key="backgroundColor" name="Font"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="C45">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="CwA-jm-s4v"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcb-y8-42c" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="277.5" width="375" height="48"/>
+                                                <color key="backgroundColor" name="Font"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="C46">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="ITh-a1-T8F"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edY-uT-Xnk" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="333.5" width="375" height="47.5"/>
+                                                <color key="backgroundColor" name="Font"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="C47">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="UnZ-YZ-T4Q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75t-ch-bL5" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="389" width="375" height="47.5"/>
+                                                <color key="backgroundColor" name="Font"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="C48">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="oxn-pY-Tpc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxS-yi-DGm" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="444.5" width="375" height="47.5"/>
+                                                <color key="backgroundColor" name="Font"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="C49">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="yKs-3a-3HH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUR-CQ-jmb" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="500" width="375" height="47.5"/>
+                                                <color key="backgroundColor" name="Font"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="W18">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="vlr-eZ-vRv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05O-oe-QhU" customClass="RoundButton" customModule="Beacon" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="555.5" width="375" height="47.5"/>
+                                                <color key="backgroundColor" name="Font"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="W19">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="selectedRoomPressed:" destination="eOx-Bz-Pci" eventType="touchUpInside" id="vnA-ix-VxZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="sUR-CQ-jmb" secondAttribute="trailing" id="LeU-eQ-Kxy"/>
+                                            <constraint firstAttribute="trailing" secondItem="YTw-H1-yFQ" secondAttribute="trailing" id="MiS-dH-prG"/>
+                                            <constraint firstItem="dU4-dr-o99" firstAttribute="leading" secondItem="rgN-eq-tLF" secondAttribute="leading" id="N4o-9U-of4"/>
+                                            <constraint firstItem="edY-uT-Xnk" firstAttribute="leading" secondItem="rgN-eq-tLF" secondAttribute="leading" id="N5s-1s-uuh"/>
+                                            <constraint firstAttribute="trailing" secondItem="dU4-dr-o99" secondAttribute="trailing" id="NBp-Ez-XMi"/>
+                                            <constraint firstAttribute="trailing" secondItem="jxS-yi-DGm" secondAttribute="trailing" id="Nt1-88-n0R"/>
+                                            <constraint firstAttribute="trailing" secondItem="y8a-8z-9jk" secondAttribute="trailing" id="PIv-Wj-PW6"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fcb-y8-42c" secondAttribute="trailing" id="RWE-Yh-z5I"/>
+                                            <constraint firstAttribute="trailing" secondItem="jsf-fn-shn" secondAttribute="trailing" id="RjN-rL-uCw"/>
+                                            <constraint firstItem="y8a-8z-9jk" firstAttribute="leading" secondItem="rgN-eq-tLF" secondAttribute="leading" id="V73-Z4-c7y"/>
+                                            <constraint firstAttribute="trailing" secondItem="AOO-Nz-RZo" secondAttribute="trailing" id="VXU-5X-eEj"/>
+                                            <constraint firstItem="Fcb-y8-42c" firstAttribute="leading" secondItem="rgN-eq-tLF" secondAttribute="leading" id="Yb3-Qp-MOx"/>
+                                            <constraint firstItem="AOO-Nz-RZo" firstAttribute="leading" secondItem="rgN-eq-tLF" secondAttribute="leading" id="dP9-uU-qmC"/>
+                                            <constraint firstItem="05O-oe-QhU" firstAttribute="leading" secondItem="rgN-eq-tLF" secondAttribute="leading" id="eSG-9n-h8N"/>
+                                            <constraint firstAttribute="trailing" secondItem="05O-oe-QhU" secondAttribute="trailing" id="fJr-Nm-64j"/>
+                                            <constraint firstItem="YTw-H1-yFQ" firstAttribute="leading" secondItem="rgN-eq-tLF" secondAttribute="leading" id="fi8-Th-Q5g"/>
+                                            <constraint firstItem="sUR-CQ-jmb" firstAttribute="leading" secondItem="rgN-eq-tLF" secondAttribute="leading" id="gQd-L9-gc8"/>
+                                            <constraint firstItem="jsf-fn-shn" firstAttribute="leading" secondItem="rgN-eq-tLF" secondAttribute="leading" id="hdd-Hd-DXv"/>
+                                            <constraint firstAttribute="trailing" secondItem="75t-ch-bL5" secondAttribute="trailing" id="jgE-p2-lBt"/>
+                                            <constraint firstItem="jxS-yi-DGm" firstAttribute="leading" secondItem="rgN-eq-tLF" secondAttribute="leading" id="mKl-YT-pgJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="edY-uT-Xnk" secondAttribute="trailing" id="qSo-JK-J5R"/>
+                                            <constraint firstItem="75t-ch-bL5" firstAttribute="leading" secondItem="rgN-eq-tLF" secondAttribute="leading" id="qmK-cJ-IEk"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rgN-eq-tLF" secondAttribute="trailing" id="ozK-U4-vp1"/>
+                                    <constraint firstItem="rgN-eq-tLF" firstAttribute="leading" secondItem="dYp-Ho-17N" secondAttribute="leading" id="sXO-mq-pWR"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="xQg-Tg-wGi" firstAttribute="trailing" secondItem="dYp-Ho-17N" secondAttribute="trailing" id="p9N-mG-3Ov"/>
+                            <constraint firstItem="dYp-Ho-17N" firstAttribute="leading" secondItem="nLz-qI-z40" secondAttribute="leading" id="tD3-IJ-HRN"/>
+                            <constraint firstItem="dYp-Ho-17N" firstAttribute="top" secondItem="xQg-Tg-wGi" secondAttribute="top" constant="10" id="tdy-Kb-cpG"/>
+                            <constraint firstItem="xQg-Tg-wGi" firstAttribute="bottom" secondItem="dYp-Ho-17N" secondAttribute="bottom" constant="10" id="uEL-tN-4X8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xQg-Tg-wGi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qSb-pW-Ldg"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="findWay" id="gfb-ti-y5m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3Y-oM-hfI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475.36231884057975" y="109.82142857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vyu-f7-Xs6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FcY-oO-7pO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tpA-fg-2cL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="Background"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eOx-Bz-Pci" kind="relationship" relationship="rootViewController" id="pBD-ou-QOq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pF5-Jf-ckf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-436.23188405797106" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.086000002920627594" green="0.14100000262260437" blue="0.27799999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Font">
+            <color red="0.89399999380111694" green="0.24699999392032623" blue="0.3529999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
