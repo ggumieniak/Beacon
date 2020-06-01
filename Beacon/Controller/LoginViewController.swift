@@ -16,8 +16,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        title = "Znajdź swoją salę"
-
         // Do any additional setup after loading the view.
     }
 

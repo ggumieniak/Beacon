@@ -1,5 +1,5 @@
 //
-//  ServerBeacon.swift
+//  BeaconFromServer.swift
 //  Beacon
 //
 //  Created by user on 01/06/2020.
@@ -8,11 +8,10 @@
 
 import Foundation
 
-struct ServerBeacon {
-    let id: Int
+struct BeaconFromServer: Decodable {
     let idBecon: String
     let minor: Int
     let major: Int
     let floor: Int
-    let abstractLength: Int
+    let abstractLenght: Int
 }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE4DC46D2484EBF800963EF2 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DC46C2484EBF800963EF2 /* BeaconManager.swift */; };
-		CE4DC46F24850F3D00963EF2 /* ServerBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DC46E24850F3D00963EF2 /* ServerBeacon.swift */; };
+		CE4DC46F24850F3D00963EF2 /* BeaconData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DC46E24850F3D00963EF2 /* BeaconData.swift */; };
 		CE779716247A9AA000FD8287 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE779715247A9AA000FD8287 /* AppDelegate.swift */; };
 		CE779718247A9AA000FD8287 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE779717247A9AA000FD8287 /* SceneDelegate.swift */; };
 		CE77971A247A9AA000FD8287 /* FindWayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE779719247A9AA000FD8287 /* FindWayViewController.swift */; };
@@ -19,11 +19,12 @@
 		CE937B2D247AE193004E7BE0 /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE937B2C247AE193004E7BE0 /* Contents.swift */; };
 		CE937B2F247AE6E2004E7BE0 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE937B2E247AE6E2004E7BE0 /* RoundButton.swift */; };
 		CEB34EBD2485126A0050C1EF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CEB34EBC2485126A0050C1EF /* .gitignore */; };
+		CEF6BF71248517E000FE9769 /* BeaconFromServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF6BF70248517E000FE9769 /* BeaconFromServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE4DC46C2484EBF800963EF2 /* BeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
-		CE4DC46E24850F3D00963EF2 /* ServerBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerBeacon.swift; sourceTree = "<group>"; };
+		CE4DC46E24850F3D00963EF2 /* BeaconData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconData.swift; sourceTree = "<group>"; };
 		CE779712247A9AA000FD8287 /* Beacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE779715247A9AA000FD8287 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE779717247A9AA000FD8287 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +38,7 @@
 		CE937B2E247AE6E2004E7BE0 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		CEB34EBB2485120E0050C1EF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CEB34EBC2485126A0050C1EF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		CEF6BF70248517E000FE9769 /* BeaconFromServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconFromServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				CE4DC46C2484EBF800963EF2 /* BeaconManager.swift */,
-				CE4DC46E24850F3D00963EF2 /* ServerBeacon.swift */,
+				CE4DC46E24850F3D00963EF2 /* BeaconData.swift */,
+				CEF6BF70248517E000FE9769 /* BeaconFromServer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,9 +188,10 @@
 			files = (
 				CE937B2F247AE6E2004E7BE0 /* RoundButton.swift in Sources */,
 				CE937B2B247ADF7C004E7BE0 /* LoginViewController.swift in Sources */,
+				CEF6BF71248517E000FE9769 /* BeaconFromServer.swift in Sources */,
 				CE937B2D247AE193004E7BE0 /* Contents.swift in Sources */,
 				CE77971A247A9AA000FD8287 /* FindWayViewController.swift in Sources */,
-				CE4DC46F24850F3D00963EF2 /* ServerBeacon.swift in Sources */,
+				CE4DC46F24850F3D00963EF2 /* BeaconData.swift in Sources */,
 				CE779716247A9AA000FD8287 /* AppDelegate.swift in Sources */,
 				CE779718247A9AA000FD8287 /* SceneDelegate.swift in Sources */,
 				CE4DC46D2484EBF800963EF2 /* BeaconManager.swift in Sources */,
