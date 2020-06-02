@@ -11,8 +11,6 @@ import Foundation
 class BeaconManager {
     let BeaconURL = "http://s35615.s.pwste.edu.pl/DataBaseBeconServer"
     var beaconDB = [BeaconData]()
-    var previousBeaconMajor: Int?
-    var distanceToDestiny: Int?
     var destinyBeacon: String?
     var previousBeacon: BeaconData?
     var searchingBeacon: BeaconData?
@@ -77,6 +75,16 @@ class BeaconManager {
         }
     }
         
+    func checkDistance() -> Int {
+        if let currentDistance = Int(currentBeacon!.abstractLenght), let searchDistance = Int(searchingBeacon!.abstractLenght) {
+            let wynik = abs(searchDistance - currentDistance)
+            distance = wynik
+            print("Roznica dystansu to \(wynik)")
+            return wynik
+        }
+        return -1
+    }
+    
     func userWentWrongSide() -> Bool {
         return previousStep! > currentStep!
     }
@@ -90,15 +98,7 @@ class BeaconManager {
         return -1
     }
     
-    func checkDistance() -> Int {
-        if let currentDistance = Int(currentBeacon!.abstractLenght), let previousDistance = Int(previousBeacon!.abstractLenght) {
-            let wynik = currentDistance - previousDistance
-            distance = wynik
-            print("Roznica dystansu to \(wynik)")
-            return wynik
-        }
-        return 999999
-    }
+
     
     func setUpDestinyBeacon(by lookingForBeacon: String) {
         for beacon in beaconDB {
