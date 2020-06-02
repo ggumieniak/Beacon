@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE39506524867AD600906694 /* ServerResponderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39506424867AD600906694 /* ServerResponderDelegate.swift */; };
 		CE4DC46D2484EBF800963EF2 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DC46C2484EBF800963EF2 /* BeaconManager.swift */; };
 		CE4DC46F24850F3D00963EF2 /* BeaconData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DC46E24850F3D00963EF2 /* BeaconData.swift */; };
 		CE779716247A9AA000FD8287 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE779715247A9AA000FD8287 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE39506424867AD600906694 /* ServerResponderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponderDelegate.swift; sourceTree = "<group>"; };
 		CE4DC46C2484EBF800963EF2 /* BeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		CE4DC46E24850F3D00963EF2 /* BeaconData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconData.swift; sourceTree = "<group>"; };
 		CE779712247A9AA000FD8287 /* Beacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +63,7 @@
 				CE4DC46E24850F3D00963EF2 /* BeaconData.swift */,
 				CEF6BF7524854FE100FE9769 /* OptionManager.swift */,
 				CEF6BF772485502200FE9769 /* SalaDB.swift */,
+				CE39506424867AD600906694 /* ServerResponderDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE39506524867AD600906694 /* ServerResponderDelegate.swift in Sources */,
 				CE937B2F247AE6E2004E7BE0 /* RoundButton.swift in Sources */,
 				CE937B2B247ADF7C004E7BE0 /* LoginViewController.swift in Sources */,
 				CEF6BF7624854FE100FE9769 /* OptionManager.swift in Sources */,

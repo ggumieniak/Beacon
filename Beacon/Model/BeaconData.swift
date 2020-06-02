@@ -14,4 +14,5 @@ struct BeaconData: Decodable {
     let minor: String
     let major: String
     let floor: String
+    let abstractLenght: String
 }

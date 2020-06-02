@@ -12,33 +12,97 @@ class BeaconManager {
     let BeaconURL = "http://s35615.s.pwste.edu.pl/DataBaseBeconServer"
     var beaconDB = [BeaconData]()
     var previousBeaconMajor: Int?
-    var currentBeaconMajor: Int?
     var distanceToDestiny: Int?
     var destinyBeacon: String?
+    var previousBeacon: BeaconData?
     var searchingBeacon: BeaconData?
-    var currentBeacon: BeaconData?
-    
-    func showDestiny(destinyBeacon: String) -> String {
-        self.destinyBeacon = destinyBeacon
-        getBeaconInformationFromDestinyBeacon()
-        checkFloor()
-        
-        return K.Answers.GO_AHEAD
+    var distance: Int?
+    var previousStep: Int?
+    var serverRsponder: ServerResponderDelegate?
+    var currentStep: Int? {
+        willSet {
+            if currentStep != nil {
+            previousStep = currentStep
+            }
+        }
     }
-    
-    func checkActualDistanceToDestiny() {
-        
-    }
-    
-    func checkFloor() {
-        if let currentFloor = Int(currentBeacon!.floor), let destinyFloor = Int(searchingBeacon!.floor) {
-            
+    var currentBeacon: BeaconData? {
+        willSet {
+            if currentBeacon != nil {
+                previousBeacon = currentBeacon
+            }
         }
     }
     
-    func getBeaconInformationFromDestinyBeacon() {
+    func checkDestiny() -> String {
+        switch checkFloor() {
+        case -1:
+            return K.Answers.GO_UP
+        case 1:
+            return K.Answers.GO_DOWN
+        case 0:
+            return getDistanceAnswer()
+        default:
+            return "Brak odpowiedzi"
+        }
+    }
+
+    
+    func checkFloor() -> Int {
+        if let currentFloor = Int(currentBeacon!.floor), let destinyFloor = Int(searchingBeacon!.floor) {
+            let wynik = currentFloor - destinyFloor
+            print("Roznica pieter to \(wynik)")
+            return abs(wynik)
+        }
+        return 0
+    }
+    
+    func getDistanceAnswer() -> String {
+        if previousBeacon == nil {
+            currentStep = checkDistance()
+            if currentStep == 0 {
+                return K.Answers.END
+            }
+            return K.Answers.GOOD_FLOOR_GO_SOMEWHERE
+        }
+        currentStep = checkPreviousFloor()
+        if userWentWrongSide() {
+            return K.Answers.GO_BACK
+        } else {
+            if currentStep == 0 {
+                return K.Answers.END
+            } else {
+                return K.Answers.GO_AHEAD
+            }
+        }
+    }
+        
+    func userWentWrongSide() -> Bool {
+        return previousStep! > currentStep!
+    }
+    
+    func checkPreviousFloor() -> Int {
+        if let currentFloor = Int(currentBeacon!.floor), let destinyFloor = Int(searchingBeacon!.floor) {
+            let wynik = currentFloor - destinyFloor
+            print("Roznica pieter to \(wynik)")
+            return abs(wynik)
+        }
+        return -1
+    }
+    
+    func checkDistance() -> Int {
+        if let currentDistance = Int(currentBeacon!.abstractLenght), let previousDistance = Int(previousBeacon!.abstractLenght) {
+            let wynik = currentDistance - previousDistance
+            distance = wynik
+            print("Roznica dystansu to \(wynik)")
+            return wynik
+        }
+        return 999999
+    }
+    
+    func setUpDestinyBeacon(by lookingForBeacon: String) {
         for beacon in beaconDB {
-            if beacon.major == destinyBeacon {
+            if beacon.id == lookingForBeacon {
                 searchingBeacon = beacon
             }
         }
@@ -47,6 +111,7 @@ class BeaconManager {
     func setBeacon(major: NSNumber) {
         let looking = "\(major)"
         currentBeacon = findBeaconByMajor(major: looking)
+        print("Obecny beacon \(currentBeacon?.major)")
     }
     
     func findBeaconByMajor(major: String) -> BeaconData {
@@ -55,12 +120,12 @@ class BeaconManager {
                 return beacon
             }
         }
-        return BeaconData(id: "0", idBecon: "0", minor: "0", major: "0", floor: "0")
+        return BeaconData(id: "0", idBecon: "0", minor: "0", major: "0", floor: "0",abstractLenght: "0")
     }
     
-    func fetchData() -> Bool {
+    func fetchData() {
         guard let url = URL(string: BeaconURL) else {
-            return false
+            return
         }
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url) { (data, response, error) in
@@ -69,11 +134,10 @@ class BeaconManager {
                 if let safeData = data {
                     do {
                         let results = try decoder.decode([BeaconData].self, from: safeData)
-//                        if results.count > 0 {
-//                            self.beaconDB = results
-//                        }
-                        print(results)
-                        print("Udalo sie pobrac dane")
+                        if results.count > 0 {
+                            self.beaconDB = results
+                        }
+                        self.dataCompleteDownloaded()
                     } catch {
                         print(error)
                     }
@@ -82,6 +146,8 @@ class BeaconManager {
         }
         task.resume()
         print("beaconData \(beaconDB)")
-        return true
+    }
+    func dataCompleteDownloaded() {
+        self.serverRsponder?.didFinishDownloading(self)
     }
 }

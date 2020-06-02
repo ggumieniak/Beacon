@@ -31,11 +31,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if beaconManager.fetchData() {
-            enableButtons()
-            unhiddenButton()
-            
-        }
+        beaconManager.serverRsponder = self
+        beaconManager.fetchData()
         optionManager.fetchData()
         // Do any additional setup after loading the view.
     }
@@ -84,4 +81,20 @@ class LoginViewController: UIViewController {
             destination.beaconManager = beaconManager
         }
     }
+}
+
+
+//MARK: - ServerRespond extension
+
+extension LoginViewController: ServerResponderDelegate {
+    func didFinishDownloading(_ sender: BeaconManager) {
+        print("Udalo sie pobrac dane")
+        DispatchQueue.main.async {
+            self.unhiddenButton()
+            self.enableButtons()
+        }
+        
+    }
+    
+    
 }

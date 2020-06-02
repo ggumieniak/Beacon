@@ -20,6 +20,8 @@ struct K {
         static let GO_BACK = "Zawróć i kieruj się w przeciwną stronę"
         static let GO_AHEAD = "Idź prosto wzdłuż korytarzem"
         static let GO_CLOSE = "Jesteś blisko"
+        static let GOOD_FLOOR_GO_SOMEWHERE = "Jesteś na dobrym piętrze, idź w dowolnym kierunku"
+        static let END = "Jesteś u celu"
     }
     struct Pictures {
 //        static let 
