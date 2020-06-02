@@ -1,5 +1,5 @@
-#  Aplikacja zaliczeniowa Technologia Beacon
-## Pozwala na odnalezienie pomieszczenia w budynku Insytutu Inżynierii Technicznej 
+#  Aplikacja przy wykorzystaniu Technologii Beacon
+Aplikacja pozwala na ułatwienie lokalizacji po budynku Insytutu Inżynierii Technicznej w PWSTE Jarosław 
 
 ## Zastosowane Technologie
 ```
