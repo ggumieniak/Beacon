@@ -31,6 +31,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         beaconManager.serverRsponder = self
         beaconManager.fetchData()
         optionManager.fetchData()

@@ -49,6 +49,7 @@ class BeaconManager {
     func checkFloor() -> Int {
         if let currentFloor = Int(currentBeacon!.floor), let destinyFloor = Int(searchingBeacon!.floor) {
             let wynik = currentFloor - destinyFloor
+            self.currentStep = wynik
             print("Roznica pieter to \(wynik)")
             return abs(wynik)
         }
@@ -63,7 +64,7 @@ class BeaconManager {
             }
             return K.Answers.GOOD_FLOOR_GO_SOMEWHERE
         }
-        currentStep = checkPreviousFloor()
+        currentStep = checkPreviousStep()
         if userWentWrongSide() {
             return K.Answers.GO_BACK
         } else {
@@ -89,11 +90,12 @@ class BeaconManager {
         return previousStep! > currentStep!
     }
     
-    func checkPreviousFloor() -> Int {
-        if let currentFloor = Int(currentBeacon!.floor), let destinyFloor = Int(searchingBeacon!.floor) {
-            let wynik = currentFloor - destinyFloor
-            print("Roznica pieter to \(wynik)")
-            return abs(wynik)
+    func checkPreviousStep() -> Int {
+        if let currentStep = Int(currentBeacon!.abstractLenght), let previousStep = Int(previousBeacon!.abstractLenght) {
+            let wynik = abs(previousStep - currentStep)
+            self.currentStep = wynik
+            print("Roznica dystansu to \(wynik)")
+            return wynik
         }
         return -1
     }
