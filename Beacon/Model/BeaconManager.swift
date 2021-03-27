@@ -9,7 +9,6 @@
 import Foundation
 
 class BeaconManager {
-    let BeaconURL = "http://s35615.s.pwste.edu.pl/DataBaseBeconServer"
     var beaconDB = [BeaconData]()
     var destinyBeacon: String?
     var previousBeacon: BeaconData?
@@ -126,7 +125,7 @@ class BeaconManager {
     }
     
     func fetchData() {
-        guard let url = URL(string: BeaconURL) else {
+        guard let url = URL(string: db.BeaconURL) else {
             return
         }
         let session = URLSession(configuration: .default)

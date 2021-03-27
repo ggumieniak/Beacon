@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50DAD599260FB1BD00B560EF /* dbConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DAD598260FB1BD00B560EF /* dbConfigure.swift */; };
 		CE39506524867AD600906694 /* ServerResponderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39506424867AD600906694 /* ServerResponderDelegate.swift */; };
 		CE4DC46D2484EBF800963EF2 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DC46C2484EBF800963EF2 /* BeaconManager.swift */; };
 		CE4DC46F24850F3D00963EF2 /* BeaconData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DC46E24850F3D00963EF2 /* BeaconData.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50DAD598260FB1BD00B560EF /* dbConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbConfigure.swift; sourceTree = "<group>"; };
 		CE39506424867AD600906694 /* ServerResponderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponderDelegate.swift; sourceTree = "<group>"; };
 		CE4DC46C2484EBF800963EF2 /* BeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		CE4DC46E24850F3D00963EF2 /* BeaconData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconData.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				CE779720247A9AA100FD8287 /* LaunchScreen.storyboard */,
 				CE779723247A9AA100FD8287 /* Info.plist */,
 				CE937B2E247AE6E2004E7BE0 /* RoundButton.swift */,
+				50DAD598260FB1BD00B560EF /* dbConfigure.swift */,
 			);
 			path = Beacon;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				CEF6BF742485424900FE9769 /* Constants.swift in Sources */,
 				CE4DC46F24850F3D00963EF2 /* BeaconData.swift in Sources */,
 				CE779716247A9AA000FD8287 /* AppDelegate.swift in Sources */,
+				50DAD599260FB1BD00B560EF /* dbConfigure.swift in Sources */,
 				CE779718247A9AA000FD8287 /* SceneDelegate.swift in Sources */,
 				CE4DC46D2484EBF800963EF2 /* BeaconManager.swift in Sources */,
 				CEF6BF782485502200FE9769 /* SalaDB.swift in Sources */,
